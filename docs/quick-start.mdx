@@ -8,4 +8,16 @@ hide_table_of_contents: true
 
 import QuickStart from "@site/src/components/QuickStart";
 
-<QuickStart />
+<QuickStart />dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" } // <-- Add this line
+    }
+}dependencies {
+    // ...
+    implementation 'com.github.Web3Auth:web3auth-android-sdk:4.0.8'
+}
+
+
